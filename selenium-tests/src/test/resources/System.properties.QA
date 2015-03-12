@@ -1,0 +1,10 @@
+WebsiteURL=https://qa.e-propuk.com/
+RemoteDriverURL=http://selenium:4000/wd/hub
+LowestTestPriority=1
+RunOnDefaultBrowserProfile=false
+DefaultUser=easyproperty.automation@gmail.com
+DefaultUserPassword=Test1234
+PexVersion=v25.1/
+PexURL=https://epqa.pexsoftware.com/
+PexUsername=autotest
+PexPassword=autopass
