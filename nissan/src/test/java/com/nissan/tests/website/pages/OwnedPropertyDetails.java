@@ -7,9 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
 
-import com.easyproperty.tests.framework.PageBase;
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.website.pages.elements.Offer;
+import com.nissan.tests.framework.PageBase;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.website.pages.elements.Offer;
 
 /**
  * A class for the landlord's owned property details page

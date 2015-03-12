@@ -11,9 +11,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.testng.Assert;
 
-import com.easyproperty.tests.framework.Log;
-import com.easyproperty.tests.framework.PageBase;
-import com.easyproperty.tests.framework.Sync;
+import com.nissan.tests.framework.Log;
+import com.nissan.tests.framework.PageBase;
+import com.nissan.tests.framework.Sync;
 
 public class YouveReceivedAnOffer extends PageBase {
 

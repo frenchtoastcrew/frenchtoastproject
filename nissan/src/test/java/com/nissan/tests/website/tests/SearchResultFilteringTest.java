@@ -1,14 +1,14 @@
-package com.easyproperty.tests.website.tests;
+package com.nissan.tests.website.tests;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.easyproperty.tests.framework.BrowserProfilesDataProvider;
-import com.easyproperty.tests.framework.Log;
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.framework.WebsiteTestBase;
-import com.easyproperty.tests.website.pages.SearchResults;
-import com.easyproperty.tests.website.pages.elements.SquareSearchResult;
+import com.nissan.tests.framework.BrowserProfilesDataProvider;
+import com.nissan.tests.framework.Log;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.framework.WebsiteTestBase;
+import com.nissan.tests.website.pages.SearchResults;
+import com.nissan.tests.website.pages.elements.SquareSearchResult;
 
 /**
  * Tests for the search results filtering functionality

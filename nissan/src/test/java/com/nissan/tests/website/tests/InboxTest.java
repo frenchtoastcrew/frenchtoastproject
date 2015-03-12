@@ -1,21 +1,21 @@
-package com.easyproperty.tests.website.tests;
+package com.nissan.tests.website.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import com.easyproperty.tests.framework.BrowserProfilesDataProvider;
-import com.easyproperty.tests.framework.DefaultUser;
-import com.easyproperty.tests.framework.Log;
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.framework.WebsiteTestBase;
-import com.easyproperty.tests.utils.RandomString;
-import com.easyproperty.tests.website.pages.Inbox;
-import com.easyproperty.tests.website.pages.ListOwnedProperties;
-import com.easyproperty.tests.website.pages.Search;
-import com.easyproperty.tests.website.pages.elements.MessagePanel;
-import com.easyproperty.tests.website.pages.elements.MessageSummary;
+import com.nissan.tests.framework.BrowserProfilesDataProvider;
+import com.nissan.tests.framework.DefaultUser;
+import com.nissan.tests.framework.Log;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.framework.WebsiteTestBase;
+import com.nissan.tests.utils.RandomString;
+import com.nissan.tests.website.pages.Inbox;
+import com.nissan.tests.website.pages.ListOwnedProperties;
+import com.nissan.tests.website.pages.Search;
+import com.nissan.tests.website.pages.elements.MessagePanel;
+import com.nissan.tests.website.pages.elements.MessageSummary;
 
 public class InboxTest extends WebsiteTestBase {
 

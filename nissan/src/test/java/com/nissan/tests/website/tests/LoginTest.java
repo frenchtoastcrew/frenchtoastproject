@@ -1,13 +1,13 @@
-package com.easyproperty.tests.website.tests;
+package com.nissan.tests.website.tests;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.easyproperty.tests.framework.BrowserProfilesDataProvider;
-import com.easyproperty.tests.framework.PexApi;
-import com.easyproperty.tests.framework.WebsiteTestBase;
-import com.easyproperty.tests.utils.RandomString;
-import com.easyproperty.tests.website.pages.Login;
+import com.nissan.tests.framework.BrowserProfilesDataProvider;
+import com.nissan.tests.framework.PexApi;
+import com.nissan.tests.framework.WebsiteTestBase;
+import com.nissan.tests.utils.RandomString;
+import com.nissan.tests.website.pages.Login;
 
 /**
  * Tests for the login functionality through our WS UI

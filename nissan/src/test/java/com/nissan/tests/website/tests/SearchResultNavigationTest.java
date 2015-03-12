@@ -1,16 +1,16 @@
-package com.easyproperty.tests.website.tests;
+package com.nissan.tests.website.tests;
 
 import java.util.List;
 
 import org.testng.annotations.Test;
 
-import com.easyproperty.tests.framework.BrowserProfilesDataProvider;
-import com.easyproperty.tests.framework.DefaultProperty;
-import com.easyproperty.tests.framework.PageBase.ResponsiveSiteVersion;
-import com.easyproperty.tests.framework.WebsiteTestBase;
-import com.easyproperty.tests.website.pages.SearchResults;
-import com.easyproperty.tests.website.pages.elements.PropertyPreview;
-import com.easyproperty.tests.website.pages.elements.SquareSearchResult;
+import com.nissan.tests.framework.BrowserProfilesDataProvider;
+import com.nissan.tests.framework.DefaultProperty;
+import com.nissan.tests.framework.PageBase.ResponsiveSiteVersion;
+import com.nissan.tests.framework.WebsiteTestBase;
+import com.nissan.tests.website.pages.SearchResults;
+import com.nissan.tests.website.pages.elements.PropertyPreview;
+import com.nissan.tests.website.pages.elements.SquareSearchResult;
 
 /**
  * Tests for navigating between the search results and the property preview

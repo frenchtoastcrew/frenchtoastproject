@@ -7,12 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import com.easyproperty.tests.website.pages.Home;
-import com.easyproperty.tests.website.pages.Inbox;
-import com.easyproperty.tests.website.pages.ListFavouriteProperties;
-import com.easyproperty.tests.website.pages.ListOwnedProperties;
-import com.easyproperty.tests.website.pages.Profile;
-import com.easyproperty.tests.website.pages.Search;
+import com.nissan.tests.website.pages.Home;
+import com.nissan.tests.website.pages.Inbox;
+import com.nissan.tests.website.pages.ListFavouriteProperties;
+import com.nissan.tests.website.pages.ListOwnedProperties;
+import com.nissan.tests.website.pages.Profile;
+import com.nissan.tests.website.pages.Search;
 
 /**
  * A base class for the different page objects

@@ -1,4 +1,4 @@
-package com.easyproperty.tests.website.pages.elements;
+package com.nissan.tests.website.pages.elements;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,12 +9,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.easyproperty.tests.framework.Log;
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.framework.WdEx;
-import com.easyproperty.tests.website.pages.ContactLandlord;
-import com.easyproperty.tests.website.pages.Login;
-import com.easyproperty.tests.website.pages.MakeAnOffer;
+import com.nissan.tests.framework.Log;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.framework.WdEx;
+import com.nissan.tests.website.pages.ContactLandlord;
+import com.nissan.tests.website.pages.Login;
+import com.nissan.tests.website.pages.MakeAnOffer;
 
 public class PropertyPreview extends WdEx {
 

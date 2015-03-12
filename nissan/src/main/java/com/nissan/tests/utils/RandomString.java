@@ -1,11 +1,11 @@
-package com.easyproperty.tests.utils;
+package com.nissan.tests.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import org.apache.commons.lang.RandomStringUtils;
 
-import com.easyproperty.tests.framework.Log;
+import com.nissan.tests.framework.Log;
 
 /**
  * A helper class for generation of different random data

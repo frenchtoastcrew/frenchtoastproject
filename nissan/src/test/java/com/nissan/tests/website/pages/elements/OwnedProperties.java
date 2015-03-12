@@ -1,14 +1,14 @@
-package com.easyproperty.tests.website.pages.elements;
+package com.nissan.tests.website.pages.elements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.framework.WdEx;
-import com.easyproperty.tests.website.pages.Login;
-import com.easyproperty.tests.website.pages.OwnedPropertyDetails;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.framework.WdEx;
+import com.nissan.tests.website.pages.Login;
+import com.nissan.tests.website.pages.OwnedPropertyDetails;
 
 /**
  * Class representing property object in /listownedproperties page

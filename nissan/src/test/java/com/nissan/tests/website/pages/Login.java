@@ -9,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import com.easyproperty.tests.framework.Log;
-import com.easyproperty.tests.framework.PageBase;
-import com.easyproperty.tests.framework.Sync;
+import com.nissan.tests.framework.Log;
+import com.nissan.tests.framework.PageBase;
+import com.nissan.tests.framework.Sync;
 
 /**
  * Page object for the login page

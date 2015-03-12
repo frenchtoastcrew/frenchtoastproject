@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import com.easyproperty.tests.website.pages.SearchResults;
-import com.easyproperty.tests.website.pages.elements.PropertyPreview;
-import com.easyproperty.tests.website.pages.elements.SquareSearchResult;
+import com.nissan.tests.website.pages.SearchResults;
+import com.nissan.tests.website.pages.elements.PropertyPreview;
+import com.nissan.tests.website.pages.elements.SquareSearchResult;
 
 /**
  * Test class describing the features of the default test property

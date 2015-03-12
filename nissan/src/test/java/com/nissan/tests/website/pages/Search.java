@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import com.easyproperty.tests.framework.Sync;
+import com.nissan.tests.framework.Sync;
 
 public class Search extends SearchPageBase {
 

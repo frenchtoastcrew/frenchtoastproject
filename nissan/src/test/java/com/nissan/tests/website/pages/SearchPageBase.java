@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import com.easyproperty.tests.framework.PageBase;
+import com.nissan.tests.framework.PageBase;
 
 /**
  * Base class for all pages where you can search for location

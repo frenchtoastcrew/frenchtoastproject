@@ -3,8 +3,8 @@ package com.nissan.tests.website.pages;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import com.easyproperty.tests.framework.PageBase;
-import com.easyproperty.tests.framework.Sync;
+import com.nissan.tests.framework.PageBase;
+import com.nissan.tests.framework.Sync;
 
 /**
  * Page object for the home page

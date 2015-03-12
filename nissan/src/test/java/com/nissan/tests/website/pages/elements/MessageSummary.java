@@ -1,4 +1,4 @@
-package com.easyproperty.tests.website.pages.elements;
+package com.nissan.tests.website.pages.elements;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -7,8 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.framework.WdEx;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.framework.WdEx;
 
 /**
  * Class representing a message summary in the inbox page

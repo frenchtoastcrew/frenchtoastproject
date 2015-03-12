@@ -13,9 +13,9 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import com.easyproperty.tests.framework.Log;
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.website.pages.elements.SquareSearchResult;
+import com.nissan.tests.framework.Log;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.website.pages.elements.SquareSearchResult;
 
 /**
  * Page object for the search results page

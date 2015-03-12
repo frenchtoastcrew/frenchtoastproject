@@ -1,20 +1,20 @@
-package com.easyproperty.tests.website.tests;
+package com.nissan.tests.website.tests;
 
 import java.util.List;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-import com.easyproperty.tests.framework.BrowserProfilesDataProvider;
-import com.easyproperty.tests.framework.PropertyInfo;
-import com.easyproperty.tests.framework.WebsiteTestBase;
-import com.easyproperty.tests.website.pages.ListOwnedProperties;
-import com.easyproperty.tests.website.pages.Login;
-import com.easyproperty.tests.website.pages.OwnedPropertyDetails;
-import com.easyproperty.tests.website.pages.Search;
-import com.easyproperty.tests.website.pages.SearchResults;
-import com.easyproperty.tests.website.pages.elements.OwnedProperties;
-import com.easyproperty.tests.website.pages.elements.SquareSearchResult;
+import com.nissan.tests.framework.BrowserProfilesDataProvider;
+import com.nissan.tests.framework.PropertyInfo;
+import com.nissan.tests.framework.WebsiteTestBase;
+import com.nissan.tests.website.pages.ListOwnedProperties;
+import com.nissan.tests.website.pages.Login;
+import com.nissan.tests.website.pages.OwnedPropertyDetails;
+import com.nissan.tests.website.pages.Search;
+import com.nissan.tests.website.pages.SearchResults;
+import com.nissan.tests.website.pages.elements.OwnedProperties;
+import com.nissan.tests.website.pages.elements.SquareSearchResult;
 
 public class StatusChangePropertyTest extends WebsiteTestBase {
 

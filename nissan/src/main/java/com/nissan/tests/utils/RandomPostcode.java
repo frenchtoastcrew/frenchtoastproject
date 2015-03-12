@@ -1,4 +1,4 @@
-package com.easyproperty.tests.utils;
+package com.nissan.tests.utils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -1,22 +1,22 @@
-package com.easyproperty.tests.website.tests;
+package com.nissan.tests.website.tests;
 
 import org.testng.annotations.Test;
 
-import com.easyproperty.tests.framework.BrowserProfilesDataProvider;
-import com.easyproperty.tests.framework.DefaultProperty;
-import com.easyproperty.tests.framework.DefaultUser;
-import com.easyproperty.tests.framework.MessageChecker;
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.framework.WebsiteTestBase;
-import com.easyproperty.tests.utils.RandomString;
-import com.easyproperty.tests.website.pages.ContactLandlord;
-import com.easyproperty.tests.website.pages.Inbox;
-import com.easyproperty.tests.website.pages.ListFavouriteProperties;
-import com.easyproperty.tests.website.pages.SearchResults;
-import com.easyproperty.tests.website.pages.elements.FavouriteProperty;
-import com.easyproperty.tests.website.pages.elements.MessagePanel;
-import com.easyproperty.tests.website.pages.elements.MessageSummary;
-import com.easyproperty.tests.website.pages.elements.PropertyPreview;
+import com.nissan.tests.framework.BrowserProfilesDataProvider;
+import com.nissan.tests.framework.DefaultProperty;
+import com.nissan.tests.framework.DefaultUser;
+import com.nissan.tests.framework.MessageChecker;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.framework.WebsiteTestBase;
+import com.nissan.tests.utils.RandomString;
+import com.nissan.tests.website.pages.ContactLandlord;
+import com.nissan.tests.website.pages.Inbox;
+import com.nissan.tests.website.pages.ListFavouriteProperties;
+import com.nissan.tests.website.pages.SearchResults;
+import com.nissan.tests.website.pages.elements.FavouriteProperty;
+import com.nissan.tests.website.pages.elements.MessagePanel;
+import com.nissan.tests.website.pages.elements.MessageSummary;
+import com.nissan.tests.website.pages.elements.PropertyPreview;
 
 public class ContactLandlordTest extends WebsiteTestBase {
 

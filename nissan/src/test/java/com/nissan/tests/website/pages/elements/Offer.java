@@ -1,4 +1,4 @@
-package com.easyproperty.tests.website.pages.elements;
+package com.nissan.tests.website.pages.elements;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,9 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import com.easyproperty.tests.framework.Log;
-import com.easyproperty.tests.framework.WdEx;
-import com.easyproperty.tests.website.pages.YouveReceivedAnOffer;
+import com.nissan.tests.framework.Log;
+import com.nissan.tests.framework.WdEx;
+import com.nissan.tests.website.pages.YouveReceivedAnOffer;
 
 /**
  * An offer for a property as displayed in the owned property details page

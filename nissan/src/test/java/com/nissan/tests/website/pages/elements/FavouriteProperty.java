@@ -1,4 +1,4 @@
-package com.easyproperty.tests.website.pages.elements;
+package com.nissan.tests.website.pages.elements;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,9 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.framework.WdEx;
-import com.easyproperty.tests.website.pages.ListFavourite;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.framework.WdEx;
+import com.nissan.tests.website.pages.ListFavourite;
 
 /**
  * Class representing property object in /listfavouriteproperties page

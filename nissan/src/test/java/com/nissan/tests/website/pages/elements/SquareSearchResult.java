@@ -1,13 +1,13 @@
-package com.easyproperty.tests.website.pages.elements;
+package com.nissan.tests.website.pages.elements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
-import com.easyproperty.tests.framework.Log;
-import com.easyproperty.tests.framework.Sync;
-import com.easyproperty.tests.framework.WdEx;
+import com.nissan.tests.framework.Log;
+import com.nissan.tests.framework.Sync;
+import com.nissan.tests.framework.WdEx;
 
 /**
  * Class representing a single search result using the default square view

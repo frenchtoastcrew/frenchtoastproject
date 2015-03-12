@@ -7,18 +7,17 @@ import java.util.Random;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import com.easyproperty.tests.pex.pages.ViewProperty;
-import com.easyproperty.tests.utils.RandomPostcode;
-import com.easyproperty.tests.utils.RandomPostcode.GeolocatedPostcode;
-import com.easyproperty.tests.utils.RandomString;
-import com.easyproperty.tests.website.pages.Home;
-import com.easyproperty.tests.website.pages.Inbox;
-import com.easyproperty.tests.website.pages.ListFavouriteProperties;
-import com.easyproperty.tests.website.pages.Login;
-import com.easyproperty.tests.website.pages.OwnedPropertyDetails;
-import com.easyproperty.tests.website.pages.Profile;
-import com.easyproperty.tests.website.pages.Search;
-import com.easyproperty.tests.website.pages.SearchResults;
+import com.nissan.tests.utils.RandomPostcode;
+import com.nissan.tests.utils.RandomPostcode.GeolocatedPostcode;
+import com.nissan.tests.utils.RandomString;
+import com.nissan.tests.website.pages.Home;
+import com.nissan.tests.website.pages.Inbox;
+import com.nissan.tests.website.pages.ListFavouriteProperties;
+import com.nissan.tests.website.pages.Login;
+import com.nissan.tests.website.pages.OwnedPropertyDetails;
+import com.nissan.tests.website.pages.Profile;
+import com.nissan.tests.website.pages.Search;
+import com.nissan.tests.website.pages.SearchResults;
 
 /**
  * A base class for all tests for the main site
@@ -57,10 +56,10 @@ public class WebsiteTestBase extends TestBase {
 	 *
 	 * @return A Login page object
 	 */
-	public com.easyproperty.tests.pex.pages.Login goToPexMSLoginPage() {
+	public com.nissan.tests.pex.pages.Login goToPexMSLoginPage() {
 		wd.get(pexBaseUrl + "signon/login.jsp");
 		return PageFactory.initElements(wd,
-				com.easyproperty.tests.pex.pages.Login.class);
+				com.nissan.tests.pex.pages.Login.class);
 	}
 
 	/**

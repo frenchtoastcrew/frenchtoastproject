@@ -1,10 +1,10 @@
-package com.easyproperty.tests.website.tests;
+package com.nissan.tests.website.tests;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.easyproperty.tests.framework.WebsiteTestBase;
-import com.easyproperty.tests.website.pages.Profile;
+import com.nissan.tests.framework.WebsiteTestBase;
+import com.nissan.tests.website.pages.Profile;
 
 /**
  * Test coverage for the user profile section page
