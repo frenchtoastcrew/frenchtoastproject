@@ -7,6 +7,7 @@ import java.util.Random;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import com.nissan.tests.pex.pages.ViewProperty;
 import com.nissan.tests.utils.RandomPostcode;
 import com.nissan.tests.utils.RandomPostcode.GeolocatedPostcode;
 import com.nissan.tests.utils.RandomString;
@@ -329,7 +330,7 @@ public class WebsiteTestBase extends TestBase {
    */
   public void publishPropertyInPexMS(String propertyID) {
     // Change the status of the property through the PEX MS UI
-    com.easyproperty.tests.pex.pages.Login lo = goToPexMSLoginPage();
+    com.nissan.tests.pex.pages.Login lo = goToPexMSLoginPage();
     lo.loginUser(getSystemProperty("PexUsername"), getSystemProperty("PexPassword"));
     ViewProperty vp = goToPexMSPropertyViewPage(propertyID);
     vp.clickModifyRecordButton();
