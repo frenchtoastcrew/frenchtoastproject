@@ -8,11 +8,6 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.nissan.tests.website.pages.Home;
-import com.nissan.tests.website.pages.Inbox;
-import com.nissan.tests.website.pages.ListFavouriteProperties;
-import com.nissan.tests.website.pages.ListOwnedProperties;
-import com.nissan.tests.website.pages.Profile;
-import com.nissan.tests.website.pages.Search;
 
 /**
  * A base class for the different page objects
@@ -86,236 +81,38 @@ public class PageBase extends WdEx {
     }
   }
 
-  /**
-   * Responds to a confirmation message by clicking the confirm or cancel
-   * buttons
-   * 
-   * @param message
-   * @param confirm
-   * @return true if the confirmation message was successfully closed
-   */
-  public boolean respondToConfirmationMessage(String message, boolean confirm) {
-    // Locate the confirmation message
-    By confirmationMessageLocator = By.xpath(String.format("//div[@id='ajax-modal']/h2[text()='%s']", message));
-    if (!Sync.wait(() -> wd.findElement(confirmationMessageLocator).isDisplayed(), LONG_WAIT)) {
-      return false;
-    }
-    // Click the appropriate button
-    if (confirm) {
-      wd.findElement(By.className("confirm_ok_icon")).click();
-    } else {
-      wd.findElement(By.className("confirm_cross_icon")).click();
-    }
-    return Sync.wait(() -> isMissing(confirmationMessageLocator), LONG_WAIT);
-  }
 
 	/**
 	 * Header web elements
 	 * 
-	 * @author Vladimir Mihov
+	 * @author ivo v.
 	 */
 
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'LIST YOUR PROPERTY')]")
-	private WebElement listYourPropertyHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'SERVICES')]")
-	private WebElement servicesHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'SEARCH')]")
-	private WebElement searchHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'CONTROL PANEL')]")
-	private WebElement controlPanelHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'SIGN IN')]")
-	private WebElement signInHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//a[contains(text(),'SIGN OUT')]")
-	private WebElement signOutHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//a[@href='#']")
-  private WebElement mobieMenuIcon;
-
-  @FindBy(how = How.XPATH, using = "//span[@id='number-of-unread-messages']/span")
-  private WebElement numberOfUnreadMessages;
-
-  @FindBy(how = How.XPATH, using = "//span[@id='number-of-unread-messages-mobile']/span")
-  private WebElement numberOfUnreadMessagesMobile;
-
-	// TODO basket empty/full, logged in/logged out
-
-	// Buttons visible in sub-header once Control panel is clicked
-
-	@FindBy(how = How.XPATH, using = "//li[not(@class='mobile_only')]/a[text()='PROPERTIES']")
-	private WebElement propertiesSubHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//li[@class='mobile_only']/a[text()='PROPERTIES']")
-	private WebElement propertiesMobileSubHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//li[not(@class='mobile_only')]/a[text()='FAVOURITES']")
-	private WebElement favouritesSubHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//li[@class='mobile_only']/a[text()='FAVOURITES']")
-	private WebElement favouritesMobileSubHeaderButton;
-
-  @FindBy(how = How.XPATH, using = "//li[not(@class='mobile_only')]/a[contains(text(),'INBOX')]")
-	private WebElement inboxSubHeaderButton;
-
-  @FindBy(how = How.XPATH, using = "//li[@class='mobile_only']/a[contains(text(),'INBOX')]")
-	private WebElement inboxMobileSubHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//li[not(@class='mobile_only')]/a[text()='PROFILE']")
-	private WebElement profileSubHeaderButton;
-
-	@FindBy(how = How.XPATH, using = "//li[@class='mobile_only']/a[text()='PROFILE']")
-	private WebElement profileMobileSubHeaderButton;
+  //MAIN PAGE NAVIGATION TABS
+  
+  @FindBy(how = How.XPATH, using = ".//*[@id='nsmn-vehicules']/a/span")
+  private WebElement newCars;
+//  .//*[@id='nsnmn-passengers-cars-cars']/div[1]/ul/li[1]/ul/li[1]
+//  .//*[@id='nsnmn-passengers-cars-cars']/div[1]/ul/li[1]/ul/li[2]
+//  .//*[@id='nsnmn-passengers-cars-cars']/div[1]/ul/li[2]/ul/li[1]
+//  .//*[@id='nsnmn-electric-vehicles-cars']/div[1]/ul/li/ul/li[1]
+  
+  @FindBy(how = How.XPATH, using = ".//*[@id='nsmn-usedcars']/a/span")
+  private WebElement usedCars;
+  @FindBy(how = How.XPATH, using = ".//*[@id='nsmn-tools']/a/span")
+  private WebElement tools;
+  @FindBy(how = How.XPATH, using = ".//*[@id='nsmn-fleet']/a/span")
+  private WebElement fleet;
+  @FindBy(how = How.XPATH, using = ".//*[@id='nsmn-contact']/a/span")
+  private WebElement contact;
+  @FindBy(how = How.XPATH, using = ".//*[@id='nsmn-innovation']/a/span")
+  private WebElement experience;
+  @FindBy(how = How.XPATH, using = ".//*[@id='nsmn-youplusnissan']/a/span")
+  private WebElement nissanOwners;
+  
 
 	// Main header buttons methods
 
-	/**
-	 * Click List Your Property button
-	 */
-	public void clickListYourPropertyButton() {
-		listYourPropertyHeaderButton.click();
-		// TODO add return type
-	}
 
-	/**
-	 * Click Services button
-	 */
-	public void clickServicesButton() {
-		servicesHeaderButton.click();
-		// TODO add return type
-	}
-
-	/**
-	 * Click Search button
-	 */
-	public Search clickSearchButton() {
-		searchHeaderButton.click();
-		return PageFactory.initElements(wd, Search.class);
-	}
-
-	/**
-	 * Click Control Panel button
-	 */
-	public ListOwnedProperties clickControlPanelButton() {
-		// TODO add check if user is LL or TE since there should be different
-		// redirect (properties or favorites)
-		controlPanelHeaderButton.click();
-		return PageFactory.initElements(wd, ListOwnedProperties.class);
-	}
-
-	/**
-	 * Click Sign In button
-	 */
-	public void clickSignInButton() {
-		signInHeaderButton.click();
-		// TODO add return type
-	}
-
-	/**
-	 * Click Sign Out button
-	 */
-  public Home clickSignOutButton() {
-		signOutHeaderButton.click();
-    return PageFactory.initElements(wd, Home.class);
-	}
-
-	// Sub header buttons methods
-	/**
-	 * Click Properties button
-	 * 
-	 * @return ListOwnedProeprties page
-	 */
-	public ListOwnedProperties clickPropertiesSubHeaderButton() {
-		if (getCurrentResponsiveSiteVersion() != ResponsiveSiteVersion.WEB) {
-			clickMenuIcon(propertiesMobileSubHeaderButton);
-		} else {
-			clickMenuIcon(propertiesSubHeaderButton);
-		}
-		return PageFactory.initElements(wd, ListOwnedProperties.class);
-	}
-
-	/**
-	 * Click Favourites button
-	 */
-  public ListFavouriteProperties clickFavouritesSubHeaderButton() {
-		if (getCurrentResponsiveSiteVersion() != ResponsiveSiteVersion.WEB) {
-			clickMenuIcon(favouritesMobileSubHeaderButton);
-		} else {
-			clickMenuIcon(favouritesSubHeaderButton);
-		}
-    return PageFactory.initElements(wd, ListFavouriteProperties.class);
-	}
-
-	/**
-	 * Click Inbox button
-	 */
-  public Inbox clickInboxSubHeaderButton() {
-		if (getCurrentResponsiveSiteVersion() != ResponsiveSiteVersion.WEB) {
-			clickMenuIcon(inboxMobileSubHeaderButton);
-		} else {
-			clickMenuIcon(inboxSubHeaderButton);
-		}
-    return PageFactory.initElements(wd, Inbox.class);
-	}
-
-	/**
-	 * Click Profile button
-	 */
-  public Profile clickProfileSubHeaderButton() {
-		if (getCurrentResponsiveSiteVersion() != ResponsiveSiteVersion.WEB) {
-			clickMenuIcon(profileMobileSubHeaderButton);
-		} else {
-			clickMenuIcon(profileSubHeaderButton);
-		}
-    return PageFactory.initElements(wd, Profile.class);
-	}
-
-	/**
-	 * Click the menu icon in case mobile or tablet version of the WS is
-	 * displayed.
-	 */
-	public void clickMenuIcon(WebElement subHeaderButton) {
-		if (!subHeaderButton.isDisplayed()) {
-			if (getCurrentResponsiveSiteVersion() != ResponsiveSiteVersion.WEB) {
-				mobieMenuIcon.click();
-				// Wait the 'reveal' animation to complete
-				Sync.wait(() -> subHeaderButton.isDisplayed());
-				subHeaderButton.click();
-			} else {
-				throw new IllegalStateException(
-						"The filters should be always visible in the web version "
-								+ "of the reponsive design");
-			}
-		} else {
-			subHeaderButton.click();
-		}
-	}
-
-  public int getNumberOfUnreadMessages() {
-    if (isMissing(By.xpath("//span[@id='number-of-unread-messages']/span"))) {
-      // The web indicator for the number of messages is missing
-      if (getCurrentResponsiveSiteVersion() != ResponsiveSiteVersion.WEB) {
-        // We are in mobile version, so try to show the mobile version of the
-        // indicator
-        mobieMenuIcon.click();
-        // Wait the 'reveal' animation to complete
-        Sync.wait(() -> !isMissing(By.xpath("//span[@id='number-of-unread-messages-mobile']")));
-        if (isMissing(By.xpath("//span[@id='number-of-unread-messages']/span"))) {
-          // There are still no unread messages
-          return 0;
-        } else {
-          return Integer.parseInt(numberOfUnreadMessagesMobile.getText().trim());
-        }
-      } else {
-        // We are in the web version, but the indicator is missing
-        return 0;
-      }
-    } else {
-      // We are in the web version and we have an indicator
-      return Integer.parseInt(numberOfUnreadMessages.getText().trim());
-    }
-  }
+	
 }
