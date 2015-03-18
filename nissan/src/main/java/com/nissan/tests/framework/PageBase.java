@@ -47,39 +47,39 @@ public class PageBase extends WdEx {
 		return ResponsiveSiteVersion.MOBILE;
 	}
 
-  /**
-   * Waits for a success message and returns true if the message appears and
-   * then disappears
-   * 
-   * @param message
-   * @return
-   */
-  public boolean verifySuccessMessage(String message) {
-    By successMessageLocator = By.xpath(String.format("//div[@class='alerts_messages success']/h2[text()='%s']",
-        message));
-    return Sync.wait(() -> !isMissing(successMessageLocator), LONG_WAIT)
-        && Sync.wait(() -> isMissing(successMessageLocator), MEDIUM_WAIT);
-  }
+//  /**
+//   * Waits for a success message and returns true if the message appears and
+//   * then disappears
+//   * 
+//   * @param message
+//   * @return
+//   */
+//  public boolean verifySuccessMessage(String message) {
+//    By successMessageLocator = By.xpath(String.format("//div[@class='alerts_messages success']/h2[text()='%s']",
+//        message));
+//    return Sync.wait(() -> !isMissing(successMessageLocator), LONG_WAIT)
+//        && Sync.wait(() -> isMissing(successMessageLocator), MEDIUM_WAIT);
+//  }
 
-  /**
-   * Waits for a modal message, dismisses it and returns true if it has appeared
-   * and was dismissed successfully
-   * 
-   * @param message
-   * @return
-   */
-  public boolean verifyMessageAndDismiss(String message) {
-    By messageLocator = By.xpath(String.format("//div[@id='ajax-modal']//h1[contains(text(),'%s')]",
-        message));
-    if (Sync.wait(() -> !isMissing(messageLocator), LONG_WAIT)) {
-      // Dismiss the message
-      By grayModalBackground = By.className("reveal-modal-bg");
-      wd.findElement(grayModalBackground).click();
-      return Sync.wait(() -> isMissing(grayModalBackground));
-    } else {
-      return false;
-    }
-  }
+//  /**
+//   * Waits for a modal message, dismisses it and returns true if it has appeared
+//   * and was dismissed successfully
+//   * 
+//   * @param message
+//   * @return
+//   */
+//  public boolean verifyMessageAndDismiss(String message) {
+//    By messageLocator = By.xpath(String.format("//div[@id='ajax-modal']//h1[contains(text(),'%s')]",
+//        message));
+//    if (Sync.wait(() -> !isMissing(messageLocator), LONG_WAIT)) {
+//      // Dismiss the message
+//      By grayModalBackground = By.className("reveal-modal-bg");
+//      wd.findElement(grayModalBackground).click();
+//      return Sync.wait(() -> isMissing(grayModalBackground));
+//    } else {
+//      return false;
+//    }
+//  }
 
 
 	/**
