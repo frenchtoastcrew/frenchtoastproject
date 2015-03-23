@@ -19,7 +19,7 @@ public class DefaultUser extends WdEx {
    * @throws Exception
    */
   public static String getId() throws Exception {
-    PexApi pex = new PexApi();
+    ApiCalls pex = new ApiCalls();
     return pex.getUserId(USERNAME);
   }
 

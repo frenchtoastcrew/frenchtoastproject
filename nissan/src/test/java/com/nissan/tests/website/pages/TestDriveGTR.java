@@ -11,6 +11,13 @@ import org.testng.Assert;
 import com.nissan.tests.framework.PageBase;
 import com.nissan.tests.framework.Sync;
 
+/**
+ * Page object for test drive gtr book page
+ *
+ * @author Vladimir Mihov
+ *
+ */
+
 public class TestDriveGTR extends PageBase {
 
 	public TestDriveGTR(WebDriver wd) {
@@ -27,6 +34,7 @@ public class TestDriveGTR extends PageBase {
 	@FindBy(how = How.ID, using = "submitlocation")
 	private WebElement findButton;
 
+	// Actions
 	/**
 	 * Enter PostCode
 	 * 
@@ -40,8 +48,8 @@ public class TestDriveGTR extends PageBase {
 	 * Clicks on Find button
 	 * 
 	 */
-	public SelectDealer findButtonClick() {
+	public SelectDealerGTR findButtonClick() {
 		findButton.click();
-		return PageFactory.initElements(wd, SelectDealer.class);
+		return PageFactory.initElements(wd, SelectDealerGTR.class);
 	}
 }

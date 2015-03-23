@@ -20,7 +20,7 @@ import org.json.JSONObject;
  *
  */
 
-public class PexApi extends WdEx {
+public class ApiCalls extends WdEx {
 
 	protected String baseUrl = getSystemProperty("WebsiteURL");
 	protected String pexUrl = getSystemProperty("PexURL");
@@ -463,7 +463,7 @@ public class PexApi extends WdEx {
 				+ "\"},\"landlord\":"
 				+ landlord + "}";
 
-		PexApi rs = new PexApi();
+		ApiCalls rs = new ApiCalls();
 		String checkCreatePropertyResponse = rs.excutePost(
 				apiPropertyRegistrationEndPoint,
 				jsonParameterRequestPropertyRegistration);

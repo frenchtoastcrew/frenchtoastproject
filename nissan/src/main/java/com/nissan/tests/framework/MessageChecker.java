@@ -125,7 +125,7 @@ public class MessageChecker extends WdEx {
     boolean success = Sync.wait(() -> {
       String message = "";
       try {
-        message = (new PexApi()).getLastMessage(user);
+        message = (new ApiCalls()).getLastMessage(user);
         String templateFileName = String.format("src/test/resources/messages/%s.html", template);
         try (BufferedReader br = new BufferedReader(new FileReader(templateFileName))) {
           for (String line; (line = br.readLine()) != null;) {
@@ -146,7 +146,7 @@ public class MessageChecker extends WdEx {
     if (!success) {
       Log.messageRed("The following message was incorrect");
       try {
-        Log.message((new PexApi()).getLastMessage(user));
+        Log.message((new ApiCalls()).getLastMessage(user));
       }
       catch (Exception e) {
         e.printStackTrace();

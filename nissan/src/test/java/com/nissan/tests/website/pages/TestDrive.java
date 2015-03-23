@@ -11,6 +11,13 @@ import org.testng.Assert;
 import com.nissan.tests.framework.PageBase;
 import com.nissan.tests.framework.Sync;
 
+/**
+ * Page object for the test drive page
+ *
+ * @author Vladimir Mihov
+ *
+ */
+
 public class TestDrive extends PageBase {
 
 	public TestDrive(WebDriver wd) {
