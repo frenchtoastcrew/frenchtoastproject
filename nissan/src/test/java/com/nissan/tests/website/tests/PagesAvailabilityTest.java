@@ -1,13 +1,6 @@
 package com.nissan.tests.website.tests;
 
-import java.sql.Date;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.List;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -27,14 +20,11 @@ public class PagesAvailabilityTest extends WebsiteTestBase {
     startTest("test");
 
     startStep("Go to page");
-    Cookie psyma = new Cookie("psyma_participation", "2");
-    wd.manage().addCookie(psyma);
     wd.get(BASE_URL + webpageURL);
     endStep();
 
     startStep("Verify element exists on page");
     endStep(Sync.wait(() -> wd.findElement(By.xpath(xpath)).isDisplayed()));
-
 
     endTest();
     

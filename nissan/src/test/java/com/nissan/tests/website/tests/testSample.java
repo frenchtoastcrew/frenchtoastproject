@@ -3,10 +3,13 @@ package com.nissan.tests.website.tests;
 import org.testng.annotations.Test;
 
 import com.nissan.tests.framework.WebsiteTestBase;
+import com.nissan.tests.utils.RandomPostcode;
 import com.nissan.tests.website.pages.Home;
 import com.nissan.tests.website.pages.SelectDealerGTR;
 import com.nissan.tests.website.pages.TestDrive;
 import com.nissan.tests.website.pages.TestDriveGTR;
+import com.nissan.tests.website.pages.TestDriveGTRCalendar;
+import com.nissan.tests.website.pages.elements.TestDriveGTRDealer;
 
 public class testSample extends WebsiteTestBase {
 
@@ -27,9 +30,8 @@ public class testSample extends WebsiteTestBase {
 		TestDriveGTR tdgtr = td.newGtrButtonClick();
 		endStep();
 
-		// TODO - read the poscode from excel
 		startStep("Enter postcode");
-		tdgtr.enterPotcode("B7 5JY");
+		tdgtr.enterPotcode(RandomPostcode.getPostcode());
 		endStep();
 
 		startStep("Click on the find");
@@ -37,9 +39,18 @@ public class testSample extends WebsiteTestBase {
 		endStep();
 
 		startStep("Select dealer");
-		selDealer.getDealer(1);
+		TestDriveGTRDealer dealer = selDealer.getDealer(1);
 		endStep();
+		
+		startStep("Submit dealer choice");
+     TestDriveGTRCalendar calendar = dealer.clickSelectButton();
+    endStep();
 
+    startStep("Submit date");
+    calendar.selectDateTime();
+    calendar.submitButtonClick();
+   endStep();
+    
 		endTest();
 
 	}

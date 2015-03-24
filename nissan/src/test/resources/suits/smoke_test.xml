@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Smoke Test" verbose="1" >
-  <test name="Test Navigating Between Search Results" >
+  <test name="Test Pages Availability" >
     <classes>
-       <class name="com.easyproperty.tests.website.tests.SearchResultNavigationTest" />
+       <class name="com.nissan.tests.website.tests.PagesAvailability" />
     </classes>
   </test>
   <test name="Test Filtering Search Results"> 

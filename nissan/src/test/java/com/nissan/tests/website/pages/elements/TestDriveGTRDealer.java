@@ -11,28 +11,27 @@ import com.nissan.tests.website.pages.TestDriveGTRCalendar;
 
 public class TestDriveGTRDealer extends WdEx {
 
-	private WebElement container;
+  private WebElement container;
+  private int index;
 
-	public TestDriveGTRDealer(WebDriver wd, WebElement container) {
-		this.wd = wd;
-		this.container = container;
-		Sync.wait(() -> container.isDisplayed());
-	}
+  public TestDriveGTRDealer(WebDriver wd, WebElement container, int index) {
+    this.wd = wd;
+    this.container = container;
+    this.index = index;
+    Sync.wait(() -> container.isDisplayed());
+  }
 
-	/**
-	 * Clicks the select button to open go to the next page - date select
-	 *
-	 * @return OwnedPropertyDetails
-	 */
-	public TestDriveGTRCalendar clickSelectButton() {
+  /**
+   * Clicks the select button to open go to the next page - date select
+   *
+   * @return OwnedPropertyDetails
+   */
+  public TestDriveGTRCalendar clickSelectButton() {
+    
+    container.click();
+    wd.findElement(By.xpath(".//*[@id='pos_" + index + "']/ul/li/div[2]/span[2]")).click();
 
-		// Click
-		container
-				.findElement(
-						By.xpath(".//span[@class='model_selection_find form_submit_online']"))
-				.click();
-
-		return PageFactory.initElements(wd, TestDriveGTRCalendar.class);
-	}
+    return PageFactory.initElements(wd, TestDriveGTRCalendar.class);
+  }
 
 }

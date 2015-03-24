@@ -11,7 +11,6 @@ import com.nissan.tests.framework.PageBase;
 import com.nissan.tests.framework.Sync;
 import com.nissan.tests.website.pages.elements.TestDriveGTRDealer;
 
-
 /**
  * Page object for select dealer page - GTR selected.
  *
@@ -20,28 +19,30 @@ import com.nissan.tests.website.pages.elements.TestDriveGTRDealer;
  */
 public class SelectDealerGTR extends PageBase {
 
-	public SelectDealerGTR(WebDriver wd) {
-		super(wd);
-		// Make sure we are on the Select Dealer GTR page
-		Assert.assertTrue(Sync.wait(() -> !isMissing(By
-				.xpath("//h2[@class = 'strapline'][contains(text(), 'Please select the dealer of your choice')]"))));
-	}
+  public SelectDealerGTR(WebDriver wd) {
+    super(wd);
+    // Make sure we are on the Select Dealer GTR page
+    Assert.assertTrue(Sync.wait(() -> !isMissing(By
+        .xpath("//h2[@class = 'strapline'][contains(text(), 'Please select the dealer of your choice')]"))));
+  }
 
-	// Page web elements
-	@FindBy(how = How.XPATH, using = "//ul[contains(@class,'maps_container')]")
-	private WebElement dealerListContainer;
+  // Page web elements
+  @FindBy(how = How.XPATH, using = "//div[contains(@id,'maps_container')]")
+  private WebElement dealerListContainer;
 
-	/**
-	 * Returns the dealer object for the n'th result
-	 *
-	 * @param n
-	 *            1-based index
-	 * @return
-	 */
-	public TestDriveGTRDealer getDealer(int n) {
-		// Locate the container of the dealer and create the object
-		return new TestDriveGTRDealer(wd, dealerListContainer.findElement(By
-				.id("dealer_" + n + "")));
-	}
+  @FindBy(how = How.XPATH, using = ".//*[@id='pos_0']/ul/li/div[2]/span[2]")
+  private WebElement submitButton;
+
+  /**
+   * Returns the dealer object for the n'th result
+   *
+   * @param n
+   *          1-based index
+   * @return
+   */
+  public TestDriveGTRDealer getDealer(int n) {
+    // Locate the container of the dealer and create the object
+    return new TestDriveGTRDealer(wd, dealerListContainer.findElement(By.xpath(".//*[@id='dealer_" + n + "']")), n);
+  }
 
 }
