@@ -20,36 +20,42 @@ import com.nissan.tests.framework.Sync;
 
 public class TestDriveGTRCalendar extends PageBase {
 
-  public TestDriveGTRCalendar(WebDriver wd) {
-    super(wd);
+	public TestDriveGTRCalendar(WebDriver wd) {
+		super(wd);
 
-    // Make sure we are on the "Calendar Nissan gt-r" page
-    Assert.assertTrue(Sync.wait(() -> !isMissing(By
-        .xpath("//h2[@class = 'strapline'][contains(text(), 'Choose a day and time for your Test Drive')]"))));
-  }
+		// Make sure we are on the "Calendar Nissan gt-r" page
+		Assert.assertTrue(Sync.wait(() -> !isMissing(By
+				.xpath("//h2[@class = 'strapline'][contains(text(), 'Choose a day and time for your Test Drive')]"))));
+	}
 
-  // Page web elements
-  @FindBy(how = How.ID, using = "calendar_Thu")
-  private WebElement thursdayColumn;
+	// Page web elements
+	@FindBy(how = How.ID, using = "calendar_Thu")
+	private WebElement thursdayColumn;
 
-  @FindBy(how = How.ID, using = "submit")
-  private WebElement submitButton;
+	@FindBy(how = How.ID, using = "submit")
+	private WebElement submitButton;
 
-  // Actions
-  /**
-   * Select date/time on a Thursday :)
-   * 
-   */
-  public void selectDateTime() {
-    thursdayColumn.findElement(By.xpath(".//div[2]/div[3]/a")).click();
-  }
+	// Actions
+	/**
+	 * Select date/time on a Thursday :)
+	 * 
+	 * @throws InterruptedException
+	 * 
+	 */
+	public void selectDateTime() throws InterruptedException {
+		if (isMissing(By.xpath(".//div[2]/div[3]/a"))) {
+			thursdayColumn.click();
+			Thread.sleep(500);
+		}
+		thursdayColumn.findElement(By.xpath(".//div[2]/div[3]/a")).click();
+	}
 
-  /**
-   * Clicks on Submit button
-   * 
-   */
-  public TestDriveDetails submitButtonClick() {
-    submitButton.click();
-    return PageFactory.initElements(wd, TestDriveDetails.class);
-  }
+	/**
+	 * Clicks on Submit button
+	 * 
+	 */
+	public TestDriveDetails submitButtonClick() {
+		submitButton.click();
+		return PageFactory.initElements(wd, TestDriveDetails.class);
+	}
 }
