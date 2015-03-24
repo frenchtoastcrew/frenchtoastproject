@@ -26,6 +26,8 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 
+import com.nissan.tests.utils.StringUtil;
+
 /**
  * A base class for all tests. Handles testNG logging and screenshots, data-
  * driven stuff, etc.
@@ -38,7 +40,7 @@ public class TestBase extends WdEx {
   protected enum ScreenshotMode {
     NO_SCREENSHOTS, SCREENSHOTS_ON_FAILURE, SCREENSHOTS
   }
-
+  protected final String BASE_URL = getSystemProperty("WebsiteURL");
   private static int testIndex;
 
   private ScreenshotMode screenshotMode;
@@ -49,6 +51,9 @@ public class TestBase extends WdEx {
   private boolean stepFinalized;
 
   private Properties profileProperties;
+  
+  protected StringUtil stringUtil;
+  
   /**
    * Make a screenshot at the end in case of an exception in the test and
    * close the browser
@@ -237,7 +242,7 @@ public class TestBase extends WdEx {
   public Object[][] excelDataProvider(String worksheet) throws InvalidFormatException, IOException {
     // Locate the correct excel file
     String filePath = "src/test/resources/datasheets/"
-        + getClass().getName().replace("com.easyproperty.tests.", "").replace(".", File.separator)
+        + getClass().getName().replace("com.nissan.tests.website.tests", "").replace(".", File.separator)
         + ".xlsx";
     return ExcelReader.getDataFromExcel(filePath, worksheet);
   }
