@@ -2,44 +2,12 @@
 <suite name="Smoke Test" verbose="1" >
   <test name="Test Pages Availability" >
     <classes>
-       <class name="com.nissan.tests.website.tests.PagesAvailability" />
+       <class name="com.nissan.tests.website.tests.PagesAvailabilityTest" />
     </classes>
   </test>
-  <test name="Test Filtering Search Results"> 
+  <test name="Test TestDrive request journey"> 
   	<classes>
-       <class name="com.easyproperty.tests.website.tests.SearchResultFilteringTest" />
+       <class name="com.nissan.tests.website.tests.TestDriveJourneyTest" />
     </classes>
   </test>
-  <test name="Test Autocomplete in Search Location"> 
-    <classes>
-       <class name="com.easyproperty.tests.website.tests.SearchTest" />
-    </classes>    
-  </test>
-  <test name="Make Offer Test Scenario">
-    <classes>
-       <class name="com.easyproperty.tests.website.tests.MakeOfferTest" />
-    </classes>
-  </test>
-  <test name="User Registration">
-    <classes>
-       <class name="com.easyproperty.tests.website.tests.RegisterTest" />
-    </classes>
-  </test>
-  <test name="Inbox Tests">
-    <classes>
-       <class name="com.easyproperty.tests.website.tests.InboxTest" />
-    </classes>
-  </test>
-  <test name="Change Property Status">
-    <classes>
-       <class name="com.easyproperty.tests.website.tests.StatusChangePropertyTest" />
-    </classes>
-  </test>
-  <!-- 
-  <test name="User Profile page">
-    <classes>
-       <class name="com.easyproperty.tests.website.tests.UserProfileTest" />
-    </classes>
-  </test>
-   -->
 </suite>

@@ -37,7 +37,7 @@ public class TestDriveGTRCalendar extends PageBase {
 
   // Actions
   /**
-   * Select date/time
+   * Select date/time on a Thursday :)
    * 
    */
   public void selectDateTime() {
@@ -48,8 +48,8 @@ public class TestDriveGTRCalendar extends PageBase {
    * Clicks on Submit button
    * 
    */
-  public SelectDealerGTR submitButtonClick() {
+  public TestDriveDetails submitButtonClick() {
     submitButton.click();
-    return PageFactory.initElements(wd, SelectDealerGTR.class);
+    return PageFactory.initElements(wd, TestDriveDetails.class);
   }
 }

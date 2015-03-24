@@ -30,7 +30,7 @@ public class TestDriveDetails extends PageBase {
 
   // Page web elements
   @FindBy(how = How.XPATH, using = ".//*[@id='title']")
-  private Select dealerListContainer;
+  private WebElement titleDD;
 
   @FindBy(how = How.XPATH, using = ".//*[@id='firstname']")
   private WebElement fName;
@@ -66,15 +66,13 @@ public class TestDriveDetails extends PageBase {
   private WebElement contactPhoneMail;
   
   /**
-   * Returns the dealer object for the n'th result
+   * Fills out all user details 
    *
-   * @param n
-   *          1-based index
-   * @return
    */
   public void fillOutDetailsForm(String title, String fName, String lName, String email, String postCode, String addr1,
-      String addr2, String city) {
-    dealerListContainer.selectByValue(title);
+      String addr2, String city, String mobile, boolean contactMail, boolean contactSMS, boolean contactPhoneMail) {
+    Select titleSelect = new Select(titleDD);
+    titleSelect.selectByValue(title);
     this.fName.sendKeys(fName);
     this.lName.sendKeys(lName);
     this.email.sendKeys(email);
@@ -82,11 +80,11 @@ public class TestDriveDetails extends PageBase {
     this.addr1.sendKeys(addr1);
     this.addr2.sendKeys(addr2);
     this.city.sendKeys(city);
-    
-    //TODO finish the setter method or write separate setters instead
-    
-    
-    
+    this.mobile.sendKeys(mobile);
+    if(this.contactMail.isSelected() != contactMail){this.contactMail.click();}
+    if(this.contactSMS.isSelected() != contactSMS){this.contactSMS.click();}
+    if(this.contactPhoneMail.isSelected() != contactPhoneMail){this.contactPhoneMail.click();}
+
   }
 
 }

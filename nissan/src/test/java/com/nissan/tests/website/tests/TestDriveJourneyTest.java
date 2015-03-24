@@ -1,22 +1,25 @@
 package com.nissan.tests.website.tests;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.nissan.tests.framework.WebsiteTestBase;
 import com.nissan.tests.utils.RandomPostcode;
+import com.nissan.tests.utils.RandomString;
 import com.nissan.tests.website.pages.Home;
 import com.nissan.tests.website.pages.SelectDealerGTR;
 import com.nissan.tests.website.pages.TestDrive;
+import com.nissan.tests.website.pages.TestDriveDetails;
 import com.nissan.tests.website.pages.TestDriveGTR;
 import com.nissan.tests.website.pages.TestDriveGTRCalendar;
 import com.nissan.tests.website.pages.elements.TestDriveGTRDealer;
 
-public class testSample extends WebsiteTestBase {
+public class TestDriveJourneyTest extends WebsiteTestBase {
 
 	@Test()
 	public void test1() throws Exception {
 
-		startTest("test");
+		startTest("Book a test drive journey test");
 
 		startStep("Go to nissan homepage");
 		Home home = goToHomePage();
@@ -48,8 +51,14 @@ public class testSample extends WebsiteTestBase {
 
     startStep("Submit date");
     calendar.selectDateTime();
-    calendar.submitButtonClick();
-   endStep();
+    TestDriveDetails detailsPage = calendar.submitButtonClick();
+    endStep();
+    
+    startStep("Fill out user data");
+    detailsPage.fillOutDetailsForm("Doctor", "John", "Doe", RandomString.generateEmail(), RandomPostcode.getPostcode(), "Addr1", "Addr2", "Guildford", "", true, true, true);
+
+    endStep(wd.findElement(By.id("submit")).isDisplayed());
+    
     
 		endTest();
 
