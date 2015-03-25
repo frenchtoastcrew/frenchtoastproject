@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.nissan.tests.framework.Sync;
 import com.nissan.tests.framework.WebsiteTestBase;
 
-public class PagesAvailabilityTest extends WebsiteTestBase {
+public class PagesAvailabilityTestMultyBrowser extends WebsiteTestBase {
 
 	@DataProvider
 	public Object[][] pagesList() throws Exception {
